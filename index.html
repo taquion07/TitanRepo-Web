@@ -1,14 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TitanRepo Web Naaaa</title>
+    <title>TitanRepo Web-Naan</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hola Mundo ---</h1>
-    <h2>Soy Ariel Ayala</h2>
-    <h3>Adiós</h3>
+    <div class="presentacion--container">
+      <h1>Hola Mundo</h1>
+      <h2>Soy Ariel Ayala</h2>
+      <p>Cursando La Tecnicatura Universitaria de Programación</p>
+    </div>
+
+    <div class="recordatorio-container">
+      <h2>Crear Nuevo Recordatorio</h2>
+      <input type="text" id="materia" placeholder="Materia" required />
+      <input type="text" id="motivo" placeholder="Motivo" required />
+      <input type="text" id="descripcion" placeholder="Descripción" />
+      <input type="datetime-local" id="fecha-recordatorio" required />
+      <button onclick="agregarRecordatorio()">Agregar Recordatorio</button>
+
+      <h3>Notas de Recordatorio</h3>
+      <div id="lista-recordatorios" class="lista-recordatorios"></div>
+    </div>
+
+    <!-- Modal de confirmación personalizado -->
+    <div id="confirmacion-modal" class="confirmacion-modal">
+      <div class="confirmacion-contenido">
+        <p>¿Está seguro de eliminar este recordatorio?</p>
+        <div class="confirmacion-botones">
+          <button
+            id="confirmar-eliminar"
+            class="confirmacion-btn confirmar-btn"
+          >
+            Eliminar
+          </button>
+          <button id="cancelar-eliminar" class="confirmacion-btn cancelar-btn">
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup de recordatorio -->
+    <div id="popup-recordatorio" class="popup-recordatorio">
+      <div class="popup-header">
+        <h3 class="popup-title">¡Recordatorio!</h3>
+        <button class="cerrar-popup" onclick="cerrarPopup()">×</button>
+      </div>
+      <div id="popup-contenido"></div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
