@@ -64,11 +64,11 @@ function actualizarLista() {
                 }"></span></p>
                 <button class="eliminar-btn" onclick="solicitarEliminacion(${
                   recordatorio.id
-                })">X</button>
+                })">
+                  <img src="/img/close.png" alt="Eliminar" width="20" height="20">
+                </button>
             `;
       lista.appendChild(item);
-
-      // Iniciar cuenta regresiva
       actualizarCuentaRegresiva(recordatorio.id, recordatorio.fecha);
     }
   });
@@ -98,27 +98,6 @@ function actualizarCuentaRegresiva(id, fechaObjetivo) {
 
     elemento.textContent = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
   }, 1000);
-}
-
-function mostrarPopup(id) {
-  const recordatorio = recordatorios.find((r) => r.id === id);
-  if (!recordatorio || popupAbierto === id) return;
-
-  popupAbierto = id;
-
-  popupContenido.innerHTML = `
-        <p><strong>Materia:</strong> ${recordatorio.materia}</p>
-        <p><strong>Motivo:</strong> ${recordatorio.motivo}</p>
-        <p>${recordatorio.descripcion || ""}</p>
-        <p>Este recordatorio estaba programado para: ${recordatorio.fecha.toLocaleString()}</p>
-    `;
-
-  popupRecordatorio.style.display = "block";
-}
-
-function cerrarPopup() {
-  popupRecordatorio.style.display = "none";
-  popupAbierto = null;
 }
 
 function solicitarEliminacion(id) {

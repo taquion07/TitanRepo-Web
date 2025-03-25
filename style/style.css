@@ -2,7 +2,6 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   margin-top: 50px;
-
   background-image: url(/img/img1.jpg);
   background-size: cover;
   background-position: center;
@@ -11,12 +10,9 @@ body {
 
 /* Estilo para el contenedor principal */
 .presentacion--container {
-  text-align: center; /* Centra el contenido */
-  background: linear-gradient(
-    135deg,
-    #0619bf,
-    #4f6f93
-  ); /* Fondo con gradiente */
+  text-align: center;
+  background: linear-gradient(135deg, #0619bf, #4f6f93);
+  /* Fondo con gradiente */
   border-radius: 15px; /* Bordes redondeados */
   padding: 40px 20px; /* Espaciado interior */
   margin: 20px auto; /* Margen superior e inferior */
@@ -36,21 +32,21 @@ body {
 
 /* Estilo del subtítulo */
 .presentacion--container h2 {
-  font-family: "Helvetica", sans-serif; /* Fuente más ligera */
-  font-size: 2em; /* Tamaño de fuente medio */
-  color: #f3f3f3; /* Gris claro */
-  margin-bottom: 20px; /* Espacio debajo del subtítulo */
-  font-weight: lighter; /* Peso de fuente más ligero */
+  font-family: "Helvetica", sans-serif;
+  font-size: 2em;
+  color: #f3f3f3;
+  margin-bottom: 20px;
+  font-weight: lighter;
 }
 
 /* Estilo del párrafo */
 .presentacion--container p {
-  font-family: "Roboto", sans-serif; /* Fuente más moderna */
-  font-size: 1.2em; /* Tamaño de fuente moderado */
-  color: #f1f1f1; /* Gris claro */
-  line-height: 1.6; /* Espaciado entre líneas */
-  max-width: 600px; /* Limita el tamaño del párrafo */
-  margin: 0 auto; /* Centra el párrafo */
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  color: #f1f1f1;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* Animación para los títulos */
@@ -151,55 +147,37 @@ button:hover {
   position: absolute;
   top: 5px;
   right: 5px;
-  background-color: #ff3333;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 25px;
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  padding: 0; /* Elimina padding por defecto */
+  width: 25px; /* Mismo ancho que alto */
   height: 25px;
   cursor: pointer;
+  display: flex; /* Para centrar la imagen */
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Forma circular */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+.eliminar-btn:hover {
+  background-color: rgba(255, 0, 0, 0.85); /* Rojo muy tenue al hover */
+}
+
+.eliminar-btn img {
+  width: 18px; /* Tamaño ligeramente menor que el botón */
+  height: 18px;
+  object-fit: contain; /* Asegura que la imagen no se distorsione */
+}
+
+/* Opcional: Efecto al hacer clic */
+.eliminar-btn:active {
+  transform: scale(0.95); /* Ligero efecto de "presionado" */
 }
 
 .countdown {
   font-weight: bold;
   color: #2196f3;
-}
-
-/* Estilo para ventanas emergentes */
-.popup-recordatorio {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  border: 2px solid #ff5722;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  width: 300px;
-  display: none;
-}
-
-.popup-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.popup-title {
-  color: #ff5722;
-  font-weight: bold;
-  margin: 0;
-}
-
-.cerrar-popup {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: #777;
 }
 
 /* Modal de confirmación */
