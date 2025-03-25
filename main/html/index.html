@@ -15,12 +15,13 @@
 
     <div class="recordatorio-container">
       <h2>Crear Nuevo Recordatorio</h2>
-      <input type="text" id="materia" placeholder="Materia" required />
-      <input type="text" id="motivo" placeholder="Motivo" required />
-      <input type="text" id="descripcion" placeholder="Descripción" />
-      <input type="datetime-local" id="fecha-recordatorio" required />
-      <button onclick="agregarRecordatorio()">Agregar Recordatorio</button>
-
+      <form>
+        <input type="text" id="materia" placeholder="Materia" required />
+        <input type="text" id="motivo" placeholder="Motivo" required />
+        <input type="text" id="descripcion" placeholder="Descripción" />
+        <input type="datetime-local" id="fecha-recordatorio" required />
+        <button onclick="agregarRecordatorio()">Agregar Recordatorio</button>
+      </form>
       <h3>Notas de Recordatorio</h3>
       <div id="lista-recordatorios" class="lista-recordatorios"></div>
     </div>
